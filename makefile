@@ -1,11 +1,11 @@
 #
-# A Makefile for WinOS/2 Program Manager
+# A Makefile for Expand
 # (c) osFree project,
 #
 
 PROJ  = expand
 TRGT = $(PROJ).exe
-DESC = Windows clock
+DESC = EXPAND
 srcfiles = $(p)msexpand$(e) &
 	$(p)kwajd$(e) &
 	$(p)lzssd$(e) &
