@@ -3,23 +3,13 @@
 # (c) osFree project,
 #
 
-PROJ  = expand
-TRGT = $(PROJ).exe
 DESC = EXPAND
-srcfiles = $(p)msexpand$(e) &
-	$(p)kwajd$(e) &
-	$(p)lzssd$(e) &
-	$(p)mszipd$(e) &
-	$(p)system$(e) &
-	$(p)szddd$(e) &
-
+SOURCES = msexpand kwajd lzssd mszipd system szddd
 
 # defines additional options for C compiler
 ADD_COPT = -sg -DEXPAND -I$(%WATCOM)$(SEP)h$(SEP)win -I$(MYDIR)mspack
+TARGET_API = DOS
 
-
-!include $(%ROOT)tools/mk/appsdos.mk
-
-TARGETS = $(PATH)$(PROJ).exe
+!include $(%ROOT)tools/mk/build.mk
 
 .c: $(MYDIR)mspack
